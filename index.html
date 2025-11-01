@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shamanberia | Ruhsal Şifa ve Bilgelik Alanı</title>
+  <meta name="description" content="Shamanberia: Zehra Şeyma'nın şamanik rehberliği, enerji çalışmaları, mudralar, astrolojik ve karmik okumalar." />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0c0b;
+      --accent: #e6b980;
+      --text: #f0f0f0;
+      --muted: #aaa;
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      font-family:'Quicksand',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 60%);
+    }
+    header {
+      text-align:center;
+      padding:60px 20px 40px;
+    }
+    header h1 {
+      font-family:'Cinzel',serif;
+      font-size:2.6rem;
+      margin:0;
+      color:var(--accent);
+      letter-spacing:2px;
+    }
+    header p {color:var(--muted); margin-top:8px;}
+    nav {
+      text-align:center;
+      margin:30px 0;
+    }
+    nav a {
+      text-decoration:none;
+      color:var(--text);
+      margin:0 12px;
+      font-weight:600;
+      transition:color .2s;
+    }
+    nav a:hover {color:var(--accent);}
+    section {
+      max-width:860px;
+      margin:60px auto;
+      padding:0 20px;
+    }
+    h2 {
+      font-family:'Cinzel',serif;
+      color:var(--accent);
+      border-bottom:1px solid rgba(230,185,128,0.3);
+      padding-bottom:6px;
+    }
+    .card {
+      background:rgba(255,255,255,0.05);
+      padding:20px;
+      border-radius:12px;
+      margin:20px 0;
+    }
+    footer {
+      text-align:center;
+      color:var(--muted);
+      font-size:.9rem;
+      padding:40px 0;
+      border-top:1px solid rgba(255,255,255,0.1);
+    }
+    a.btn {
+      display:inline-block;
+      margin-top:12px;
+      background:var(--accent);
+      color:#201b13;
+      padding:10px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shamanberia</h1>
+    <p>Ruhsal Şifa · Enerji Dengeleme · Karmik Bilgelik</p>
+  </header>
+
+  <nav>
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#calismalar">Çalışmalar</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+
+  <section id="hakkimda">
+    <h2>Hakkımda</h2>
+    <div class="card">
+      <p>Ben Zehra Şeyma — Shamanberia'nın kurucusuyum. Şamanik enerji çalışmaları, mudralar, astrolojik haritalar ve ruhsal farkındalık üzerine rehberlik yapıyorum. 
+      Bu alan, insanın kendi öz ışığıyla yeniden bağlantı kurmasını hedefleyen kadim bilgeliklerin çağdaş bir buluşma noktasıdır.</p>
+    </div>
+  </section>
+
+  <section id="calismalar">
+    <h2>Ruhsal Çalışmalar</h2>
+    <div class="card">
+      <h3>Mudra Rehberliği</h3>
+      <p>El sembollerinin enerji bedeninde yarattığı dönüşüm alanlarını anlatan kadim uygulamalar.</p>
+      <a href="#" class="btn">Daha Fazla</a>
+    </div>
+    <div class="card">
+      <h3>Karmik Harita Okuması</h3>
+      <p>Geçmiş yaşam izlerinin bugünkü yolculuğunu anlamak için astrolojik derinlik.</p>
+      <a href="#" class="btn">Detaylar</a>
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <div class="card">
+      <p>E-posta: <a href="mailto:ornek@mail.com">ornek@mail.com</a><br/>
+      Instagram: <a href="#" target="_blank">@shamanberia</a></p>
+    </div>
+  </section>
+
+  <footer>© <span id="yil"></span> Shamanberia · Ruhsal Bilgelik Alanı</footer>
+  <script>document.getElementById('yil').textContent = new Date().getFullYear();</script>
+</body>
+</html>
