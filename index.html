@@ -4,131 +4,168 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Shamanberia | Ruhsal Şifa ve Bilgelik Alanı</title>
-  <meta name="description" content="Shamanberia: Zehra Şeyma'nın şamanik rehberliği, enerji çalışmaları, mudralar, astrolojik ve karmik okumalar." />
+  <meta name="description" content="Shamanberia: şamanik rehberlik, enerji dengeleme, mudralar, karmik okumalar ve içsel dönüşüm yolculuğu." />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0d0c0b;
-      --accent: #e6b980;
-      --text: #f0f0f0;
-      --muted: #aaa;
+      --bg:#0d0c0b; --accent:#e6b980; --text:#f0f0f0; --muted:#aaa; --card:rgba(255,255,255,0.05);
     }
     *{box-sizing:border-box}
-    body {
-      margin:0;
-      font-family:'Quicksand',sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-      background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 60%);
-    }
-    header {
-      text-align:center;
-      padding:60px 20px 40px;
-    }
-    header h1 {
-      font-family:'Cinzel',serif;
-      font-size:2.6rem;
-      margin:0;
-      color:var(--accent);
-      letter-spacing:2px;
-    }
-    header p {color:var(--muted); margin-top:8px;}
-    nav {
-      text-align:center;
-      margin:30px 0;
-    }
-    nav a {
-      text-decoration:none;
-      color:var(--text);
-      margin:0 12px;
-      font-weight:600;
-      transition:color .2s;
-    }
-    nav a:hover {color:var(--accent);}
-    section {
-      max-width:860px;
-      margin:60px auto;
-      padding:0 20px;
-    }
-    h2 {
-      font-family:'Cinzel',serif;
-      color:var(--accent);
-      border-bottom:1px solid rgba(230,185,128,0.3);
-      padding-bottom:6px;
-    }
-    .card {
-      background:rgba(255,255,255,0.05);
-      padding:20px;
-      border-radius:12px;
-      margin:20px 0;
-    }
-    footer {
-      text-align:center;
-      color:var(--muted);
-      font-size:.9rem;
-      padding:40px 0;
-      border-top:1px solid rgba(255,255,255,0.1);
-    }
-    a.btn {
-      display:inline-block;
-      margin-top:12px;
-      background:var(--accent);
-      color:#201b13;
-      padding:10px 18px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Quicksand',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;
+         background-image:radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 60%);}
+    .wrap{max-width:980px;margin:auto;padding:0 20px}
+    header{text-align:center;padding:56px 20px 28px}
+    header h1{font-family:'Cinzel',serif;font-size:2.6rem;margin:0;color:var(--accent);letter-spacing:2px}
+    header p{color:var(--muted);margin:8px 0 18px}
+    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;background:var(--accent);color:#201b13;padding:10px 18px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(230,185,128,0.6);color:var(--accent)}
+    nav{text-align:center;margin:24px 0}
+    nav a{text-decoration:none;color:var(--text);margin:0 12px;font-weight:600;transition:color .2s}
+    nav a:hover{color:var(--accent)}
+    section{max-width:980px;margin:56px auto}
+    h2{font-family:'Cinzel',serif;color:var(--accent);border-bottom:1px solid rgba(230,185,128,.3);padding:0 0 8px;margin:0 0 18px}
+    .card{background:var(--card);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+    .badge{display:inline-block;border:1px solid rgba(230,185,128,.4);color:var(--accent);border-radius:999px;padding:4px 10px;font-size:.86rem;margin-right:6px}
+    .note{color:var(--muted);font-size:.95rem}
+    .quote{font-style:italic;border-left:3px solid var(--accent);padding-left:14px;color:#ddd}
+    details{background:var(--card);border-radius:12px;border:1px solid rgba(255,255,255,.08);padding:14px;margin:10px 0}
+    details summary{cursor:pointer;font-weight:700}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;padding:44px 0;border-top:1px solid rgba(255,255,255,.1);margin-top:56px}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:6px 0}
+    .sub{color:#d9c7ac;font-weight:700;margin:0 0 8px}
   </style>
 </head>
 <body>
-  <header>
+  <header class="wrap">
     <h1>Shamanberia</h1>
     <p>Ruhsal Şifa · Enerji Dengeleme · Karmik Bilgelik</p>
+    <div class="cta">
+      <a class="btn" href="#calismalar">Çalışmaları Keşfet</a>
+      <a class="btn ghost" href="#iletisim">İletişime Geç</a>
+    </div>
   </header>
 
   <nav>
     <a href="#hakkimda">Hakkımda</a>
     <a href="#calismalar">Çalışmalar</a>
+    <a href="#yontem">Çalışma Biçimim</a>
+    <a href="#sss">SSS</a>
     <a href="#iletisim">İletişim</a>
   </nav>
 
-  <section id="hakkimda">
-  <h2>Hakkımda</h2>
-  <div class="card">
-    <p><strong>Ben ShamanBeria.</strong><br><br>
-    Ruhsal yolda hem rehber hem de hâlâ öğrenmekte olan bir öğrenciyim.  
-    Yolumun amacı; insanın özündeki ışığı hatırlamasına, kendi hakikatini fark etmesine eşlik edebilmek.  
-    Kadim bilgeliği modern bilincin diliyle buluşturuyor, her karşılaşmayı bir öğrenme alanı olarak görüyorum.  
-    Bu alan, birlikte dönüşmenin ve ışıkla yol almanın buluşma noktasıdır — çünkü ben de hâlâ o ışığın öğrencisiyim.</p>
-  </div>
-</section>
+  <main class="wrap">
+    <!-- HAKKIMDA -->
+    <section id="hakkimda">
+      <h2>Hakkımda</h2>
+      <div class="card">
+        <p><strong>Ben ShamanBeria.</strong><br><br>
+        Ruhsal yolda hem rehber, hem de hâlâ öğrenmekte olan bir öğrenciyim. Amacım; insanın özündeki ışığı hatırlamasına, kendi hakikatini sezip
+        ifade edebilmesine eşlik etmek. Kadim bilgeliği modern bilincin diliyle buluşturuyor, her karşılaşmayı bir öğrenme alanı olarak görüyorum.
+        Bu alan, birlikte dönüşmenin ve ışıkla yol almanın buluşma noktasıdır — çünkü ben de hâlâ o ışığın öğrencisiyim.</p>
 
+        <p class="sub">Yaklaşımım</p>
+        <ul class="list">
+          <li><strong>Şefkatli tanıklık:</strong> Yargısız bir alan açarım; herkes kendi hızında derinleşir.</li>
+          <li><strong>Bütüncül bakış:</strong> Zihnin, kalbin ve bedenin dili bir araya gelir.</li>
+          <li><strong>Ritüel ve simgeler:</strong> Mudralar, nefes ve niyet çalışmalarıyla enerji dengelenir.</li>
+          <li><strong>Topraklanmış mistisizm:</strong> Gündelik hayata uygulanabilir, sade pratikler.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="calismalar">
-    <h2>Ruhsal Çalışmalar</h2>
-    <div class="card">
-      <h3>Mudra Rehberliği</h3>
-      <p>El sembollerinin enerji bedeninde yarattığı dönüşüm alanlarını anlatan kadim uygulamalar.</p>
-      <a href="#" class="btn">Daha Fazla</a>
-    </div>
-    <div class="card">
-      <h3>Karmik Harita Okuması</h3>
-      <p>Geçmiş yaşam izlerinin bugünkü yolculuğunu anlamak için astrolojik derinlik.</p>
-      <a href="#" class="btn">Detaylar</a>
-    </div>
-  </section>
+    <!-- CALISMALAR -->
+    <section id="calismalar">
+      <h2>Ruhsal Çalışmalar</h2>
 
-  <section id="iletisim">
-    <h2>İletişim</h2>
-    <div class="card">
-      <p>E-posta: <a href="mailto:ornek@mail.com">shamanberia@gmail.com</a><br/>
-      Instagram: <a href="#" target="_blank">@shamanberia</a></p>
-    </div>
-  </section>
+      <div class="grid">
+        <article class="card">
+          <span class="badge">Mudra</span>
+          <h3>Mudra Rehberliği</h3>
+          <p>El sembollerinin enerji bedenindeki akışları nasıl düzenlediğini, hangi niyetlerle çalışılacağını ve günlük pratiklere nasıl
+          entegre edileceğini birlikte deneyimleriz.</p>
+          <p class="note">Seans: nefes + mudra dizileri · kısa ev ödevleri</p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Enerji</span>
+          <h3>Enerji Dengeleme</h3>
+          <p>Beden-zihin alanındaki tıkanıklıklara nazikçe dokunur, nefes ve ritüellerle alanı yumuşatırız. Amaç; canlılık, berraklık ve
+          hizalanmış bir hâl.</p>
+          <p class="note">Seans: niyet belirleme · yönlendirilmiş imgeleme</p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Karmik</span>
+          <h3>Karmik Harita Okuması</h3>
+          <p>Geçmişten gelen temaları, tekrar eden döngüleri ve öğrenme alanlarını astrolojik semboller üzerinden okuruz. Odak; farkındalık ve özgür seçim.</p>
+          <p class="note">Seans: harita analizi · yol haritası notları</p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Rüya</span>
+          <h3>Rüya Çalışmaları</h3>
+          <p>Rüyaların dili semboliktir. Rüya defteri ve basit ritüellerle bilinçaltının mesajlarını nazikçe görünür kılarız.</p>
+          <p class="note">Seans: rüya günlükleri · sembol sözlüğü</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- YONTEM -->
+    <section id="yontem">
+      <h2>Çalışma Biçimim</h2>
+      <div class="card">
+        <ol class="list">
+          <li><strong>Niyet & Tanışma:</strong> Kısa bir sohbet, ihtiyacın ve beklentin netleşir.</li>
+          <li><strong>Ritüel Alanı:</strong> Nefes, mudra ve yönlendirilmiş imgelem ile güvenli bir alan kurulur.</li>
+          <li><strong>Gözlem & Yansıtma:</strong> Duygu-beden-zihin katmanları şefkatle görülür.</li>
+          <li><strong>Entegrasyon:</strong> Günlük yaşama taşınacak sade pratikler ve mini ödevler verilir.</li>
+        </ol>
+        <p class="quote">“Her seans, içsel ışığın hatırlandığı küçük bir eşiktir.”</p>
+      </div>
+    </section>
+
+    <!-- SSS -->
+    <section id="sss">
+      <h2>Sık Sorulan Sorular</h2>
+
+      <details>
+        <summary>Seanslar çevrimiçi mi yapılıyor?</summary>
+        <p>Evet, şu an çevrimiçi buluşuyoruz. Zaman ve alan açısından esneklik sağlıyor.</p>
+      </details>
+
+      <details>
+        <summary>Yeni başlayan biri katılabilir mi?</summary>
+        <p>Kesinlikle. Alan, “ilk adımını atan”lar için de “yolda olan”lar için de güvenli ve kapsayıcıdır.</p>
+      </details>
+
+      <details>
+        <summary>Her çalışma kişiye özel mi?</summary>
+        <p>Evet. Görüşme öncesi kısa bir form/mesaj ile odak alanını anlamlandırır, seansı ona göre şekillendiririm.</p>
+      </details>
+    </section>
+
+    <!-- ILETISIM -->
+    <section id="iletisim">
+      <h2>İletişim</h2>
+      <div class="card">
+        <p>E-posta: <a href="mailto:ornek@mail.com">Shamanberia@gmail.com</a><br>
+        Instagram: <a href="#" target="_blank">@shamanberia</a></p>
+        <p class="note">Seans/çalışma talebi için konu satırına “Randevu” yazman yeterli.</p>
+        <div class="cta">
+          <a class="btn" href="mailto:ornek@mail.com?subject=Randevu%20Talebi%20-%20Shamanberia">Randevu Talep Et</a>
+          <a class="btn ghost" href="#calismalar">Çalışmalara Dön</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>© <span id="yil"></span> Shamanberia · Ruhsal Bilgelik Alanı</footer>
-  <script>document.getElementById('yil').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
